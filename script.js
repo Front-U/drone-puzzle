@@ -37,14 +37,14 @@ function applyData(json) {
   });
 
   // Оновлюємо список подяк
-const list = document.getElementById("donors-list");
-list.innerHTML = "";
+  const list = document.getElementById("donors-list");
+  list.innerHTML = "";
 
-thanks.slice().reverse().forEach(item => {
-  const li = document.createElement("li");
-  li.textContent = `${item.name} — ${item.amount} грн`;
-  list.appendChild(li);
-});
+  thanks.slice().reverse().forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} — ${item.amount} грн`;
+    list.appendChild(li);
+  });
 
   // Підрахунок загальної суми
   const total = [...data, ...thanks].reduce((sum, item) => sum + (item.amount || 0), 0);
