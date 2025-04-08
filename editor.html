@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Редактор Donatorів</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: auto; padding: 2rem; }
+    input, select { margin-bottom: 1rem; width: 100%; padding: 0.5rem; }
+    button { padding: 0.5rem 1rem; margin-right: 1rem; }
+    #output, #preview { white-space: pre; background: #f9f9f9; padding: 1rem; margin-top: 1rem; border: 1px solid #ccc; }
+    ul { padding-left: 1rem; }
+    li { margin-bottom: 4px; }
+    .edit-btn, .delete-btn {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .edit-btn:hover, .delete-btn:hover {
+      text-decoration: underline;
+    }
+    #sum { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Редактор Donatorів</h1>
+
+  <label>Ім’я:</label>
+  <input type="text" id="name" />
+
+  <label>Сума донату (грн):</label>
+  <input type="number" id="amount" />
+
+  <label>Колір (пазл):</label>
+  <input type="color" id="color" value="#4CAF50" />
+
+  <button onclick="addOrUpdate()">Додати / Оновити</button>
+  <button onclick="downloadJSON()">Зберегти JSON</button>
+
+  <div id="preview"></div>
+  <div id="sum"></div>
+  <div id="output"></div>
+
+  <script>
+    let puzzles = [];
+    let thanks = [];
+    let counter = 1;
+    let editIndex = -1;
+
+    function addOrUpdate() {
+      const name = document.getElementById("name").value.trim();
+      const amount = parseFloat(document.getElementById("amount").value);
+      const color = document.getElementById("color").value;
+
+      if (!name || isNaN(amount)) {
+        alert("Введи ім’я та суму!");
+        return;
+      }
+
+      if (editIndex !== -1) {
+        if (amount >= 2500) {
+          puzzles[editIndex] = { ...puzzles[editIndex], name, color };
+        } else {
+          thanks.push(name);
+          puzzles.splice(editIndex, 1);
+        }
+        editIndex = -1;
+      } else {
+        if (amount >= 2500) {
+          puzzles.push({
+            id: `puzzle-${String(counter).padStart(2, '0')}`,
+            name,
+            color
+          });
+          counter++;
+        } else {
+          thanks.push(name);
+        }
+      }
+
+      clearForm();
+      showPreview();
+      showOutput();
+    }
+
+    function clearForm() {
+      document.getElementById("name").value = "";
+      document.getElementById("amount").value = "";
+      document.getElementById("color").value = "#4CAF50";
+      editIndex = -1;
+    }
+
+    function showPreview() {
+      const list = [];
+
+      list.push("<strong>Пазли:</strong>");
+      puzzles.forEach((p, i) => {
+        list.push(`<li>
+          ${p.name} (ID: ${p.id}, колір: ${p.color})
+          <span class="edit-btn" onclick="edit(${i})">✏️</span>
+          <span class="delete-btn" onclick="remove(${i})">🗑️</span>
+        </li>`);
+      });
+
+      list.push("<br><strong>Подяки (<2500):</strong>");
+      thanks.forEach((name, i) => {
+        list.push(`<li>
+          ${name}
+          <span class="delete-btn" onclick="removeThank(${i})">🗑️</span>
+        </li>`);
+      });
+
+      document.getElementById("preview").innerHTML = `<ul>${list.join("")}</ul>`;
+
+      const sum = puzzles.length * 2500 + thanks.length * 2499;
+      document.getElementById("sum").textContent = `Загальна сума донатів: ${sum.toLocaleString()} грн`;
+    }
+
+    function remove(index) {
+      puzzles.splice(index, 1);
+      showPreview();
+      showOutput();
+    }
+
+    function removeThank(index) {
+      thanks.splice(index, 1);
+      showPreview();
+      showOutput();
+    }
+
+    function edit(index) {
+      const item = puzzles[index];
+      document.getElementById("name").value = item.name;
+      document.getElementById("amount").value = "2500";
+      document.getElementById("color").value = item.color;
+      editIndex = index;
+    }
+
+    function showOutput() {
+      const data = {
+        puzzles,
+        thanks
+      };
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+
+    function downloadJSON() {
+      const data = {
+        puzzles,
+        thanks
+      };
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = "data.json";
+      link.click();
+    }
+  </script>
+</body>
+</html>
