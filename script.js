@@ -44,6 +44,8 @@ thanks.reverse().forEach(name => {
   li.textContent = name;
   list.appendChild(li);
   });
+  const total = data.reduce((sum, item) => sum + (item.amount || 0), 0);
+  document.getElementById("total-sum").textContent = `Зібрано: ${total.toLocaleString("uk-UA")} грн`;
 }
 
 function fetchAndUpdate() {
