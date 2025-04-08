@@ -14,15 +14,27 @@ body {
 
 header {
   display: flex;
-  align-items: center;
-  padding: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1rem;
   background: rgba(255,255,255,0.9);
   border-bottom: 2px solid #ccc;
+  flex-wrap: wrap;
 }
 
-header img.logo {
+.logo {
   height: 48px;
   margin-right: 1rem;
+}
+
+.ema-logo-top {
+  height: 60px;
+  margin-left: auto;
+}
+
+.header-text {
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 header h1 {
@@ -30,14 +42,15 @@ header h1 {
   font-weight: 700;
   margin: 0;
   color: #214BC9;
+  text-align: left;
 }
 
 header .goal {
   font-size: 1.1rem;
   font-weight: 400;
-  margin-left: 3.5rem;
   margin-top: 0.3rem;
   color: #333;
+  text-align: left;
 }
 
 main .content {
@@ -90,37 +103,35 @@ main .content {
   margin-top: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #FFD400;
+  color: #D32F2F;
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 1rem;
-  background: rgba(255,255,255,0.95);
-  border-top: 2px solid #ccc;
-  flex-wrap: wrap;
+  height: 100px;
+  position: relative;
+  background: transparent;
 }
 
-footer .qr-block {
-  text-align: right;
+.qr-block.fixed-qr {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.9);
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-footer .qr-block img {
-  width: 120px;
+.qr-block.fixed-qr img {
+  width: 100px;
   height: auto;
 }
 
-footer .qr-block p {
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
+.qr-block.fixed-qr p {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
   color: #333;
-}
-
-footer .ema-logo {
-  height: 40px;
-  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -132,13 +143,18 @@ footer .ema-logo {
     margin-top: 2rem;
   }
 
-  footer {
+  header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
   }
 
-  footer .qr-block {
-    margin-top: 1rem;
+  .ema-logo-top {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .qr-block.fixed-qr {
+    position: static;
+    margin: 2rem auto 0;
   }
 }
