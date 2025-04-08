@@ -118,6 +118,7 @@ main {
   bottom: 0;
   background: rgba(255, 255, 255, 0.95);
   padding-top: 0.5rem;
+  z-index: 1; 
 }
 
 .qr-section {
