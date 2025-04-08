@@ -1,32 +1,43 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #D8F0FE, #214BC9);
+  color: #1c1c1c;
 }
 
 header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.9);
+  border-bottom: 2px solid #ccc;
+}
+
+header img.logo {
+  height: 48px;
+  margin-right: 1rem;
 }
 
 header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
   margin: 0;
-  font-size: 2rem;
-  color: #1a237e;
+  color: #214BC9;
 }
 
 header .goal {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 3.5rem;
+  margin-top: 0.3rem;
+  color: #333;
 }
 
 main .content {
@@ -52,13 +63,15 @@ main .content {
 #thanks-wrapper {
   flex: 1 1 35%;
   padding: 1rem;
-  background-color: #f9f9f9;
-  border-left: 2px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin-top: 1rem;
 }
 
 #thanks-wrapper h2 {
-  margin-top: 0;
-  color: #388e3c;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #214BC9;
 }
 
 #donors-list {
@@ -70,43 +83,62 @@ main .content {
 #donors-list li {
   margin-bottom: 4px;
   font-size: 1rem;
+  color: #111;
 }
 
 #total-sum {
   margin-top: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.2rem;
-  color: #d32f2f;
+  color: #FFD400;
 }
 
 footer {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 1rem;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  background: rgba(255,255,255,0.95);
+  border-top: 2px solid #ccc;
+  flex-wrap: wrap;
 }
 
 footer .qr-block {
-  display: inline-block;
-  text-align: center;
+  text-align: right;
 }
 
-footer img {
+footer .qr-block img {
   width: 120px;
   height: auto;
 }
 
-footer p {
-  margin-top: 0.5rem;
+footer .qr-block p {
   font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #333;
 }
+
+footer .ema-logo {
+  height: 40px;
+  margin-left: 1rem;
+}
+
 @media (max-width: 768px) {
   main .content {
     flex-direction: column;
   }
+
   #thanks-wrapper {
-    border-left: none;
-    border-top: 2px solid #ddd;
     margin-top: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .qr-block {
+    margin-top: 1rem;
   }
 }
