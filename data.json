@@ -2,9 +2,9 @@
   "puzzles": [
     {
       "id": "puzzle-01",
-      "name": "Андрій з Привату",
+      "name": "Микола з Привату",
       "color": "#E91E63",
-      "amount": 3000
+      "amount": 3500
     },
     {
       "id": "puzzle-02",
@@ -28,49 +28,49 @@
       "id": "puzzle-05",
       "name": "Наталія Гринь",
       "color": "#3F51B5",
-      "amount": 3000
+      "amount": 2500
     },
     {
       "id": "puzzle-06",
       "name": "Олексій Михайлівський",
       "color": "#1976D2",
-      "amount": 3500
+      "amount": 250
     },
     {
       "id": "puzzle-07",
       "name": "Михайло Гудзь",
       "color": "#FF5722",
-      "amount": 4000
+      "amount": 250
     },
     {
       "id": "puzzle-08",
       "name": "Акордбанк",
       "color": "#00BCD4",
-      "amount": 4500
+      "amount": 2500
     },
     {
       "id": "puzzle-09",
       "name": "Олена з Кредо",
       "color": "#F44336",
-      "amount": 4000
+      "amount": 2500
     },
     {
       "id": "puzzle-10",
       "name": "Євген",
       "color": "#CDDC39",
-      "amount": 4500
+      "amount": 2500
     },
     {
       "id": "puzzle-11",
       "name": "Ярослав",
       "color": "#512DA8",
-      "amount": 4500
+      "amount": 2500
     },
     {
       "id": "puzzle-12",
       "name": "Ірина",
       "color": "#689F38",
-      "amount": 5000
+      "amount": 2500
     },
     {
       "id": "puzzle-13",
