@@ -3,40 +3,47 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Дрон-пазл</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="assets/logo-frontu.png" alt="Front-U" class="logo" />
-    <div class="header-text">
-      <h1>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</h1>
-      <p class="goal">Мета збору: <strong>75 000 грн</strong> на дрон для підрозділу РУБАК “Вершники”, який активно воює на передовій.</p>
-    </div>
-    <img src="assets/logo-ema.png" alt="EMA" class="ema-logo-top" />
-  </header>
 
-  <main>
-    <div class="content">
-      <section id="drone-wrapper">
-        <object id="drone-svg" data="assets/drone.svg" type="image/svg+xml"></object>
-      </section>
+  <div class="top">
+    <header>
+      <img src="assets/logo-front-u.png" alt="Front-U Logo" class="logo" />
+      <div class="header-text">
+        <h1>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</h1>
+        <p class="goal">Мета збору: <strong>75 000 грн</strong> на дрон для підрозділу РУБАК “Вершники”, який активно воює на передовій.</p>
+      </div>
+      <img src="assets/logo-ema.png" alt="EMA Logo" class="ema-logo-top" />
+    </header>
+  </div>
 
-      <aside id="thanks-wrapper">
-        <h2>Подяки</h2>
-        <ul id="donors-list"></ul>
-        <div id="total-sum">Зібрано: 0 грн</div>
-      </aside>
-    </div>
-  </main>
+  <div class="middle">
+    <main>
+      <div class="content">
+        <div id="drone-wrapper">
+          <object id="drone-svg" type="image/svg+xml" data="assets/drone.svg"></object>
+        </div>
 
-  <footer>
-    <div class="qr-block fixed-qr">
-      <img src="assets/qr.png" alt="QR код до банку" />
-      <p>Кожен донат від 2500 грн — і пазл твій. Менше — Подяка!</p>
-    </div>
-  </footer>
+        <div id="thanks-wrapper">
+          <h2>Подяки</h2>
+          <ul id="donors-list"></ul>
+          <div id="total-sum">Зібрано: 0 грн</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="bottom">
+    <section class="qr-section">
+      <div class="qr-card">
+        <img src="assets/qr-code.png" alt="QR код" />
+        <p>Кожен донат від 2500 грн — і пазл твій. Менше — Подяка!</p>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
