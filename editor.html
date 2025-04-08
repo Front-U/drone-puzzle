@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -10,13 +11,8 @@
     #output, #preview { white-space: pre; background: #f9f9f9; padding: 1rem; margin-top: 1rem; border: 1px solid #ccc; }
     ul { padding-left: 1rem; }
     li { margin-bottom: 4px; }
-    .edit-btn, .delete-btn {
-      margin-left: 10px;
-      cursor: pointer;
-    }
-    .edit-btn:hover, .delete-btn:hover {
-      text-decoration: underline;
-    }
+    .edit-btn, .delete-btn { margin-left: 10px; cursor: pointer; }
+    .edit-btn:hover, .delete-btn:hover { text-decoration: underline; }
     #sum { margin-top: 1rem; font-weight: bold; }
   </style>
 </head>
@@ -29,26 +25,42 @@
   <label>Сума донату (грн):</label>
   <input type="number" id="amount" />
 
-  <label>Колір (пазл):</label>
-  <input type="color" id="color" value="#4CAF50" />
-
-  <button onclick="addOrUpdate()">Додати / Оновити</button>
+  <button onclick="addOrUpdate()">Додати донатора</button>
   <button onclick="downloadJSON()">Зберегти JSON</button>
+  <button onclick="clearAll()">🧹 Очистити всі дані</button>
+  <input type="file" id="fileInput" onchange="importJSON()" />
 
   <div id="preview"></div>
   <div id="sum"></div>
   <div id="output"></div>
 
   <script>
+    const palette = ["#4CAF50", "#2196F3", "#FF9800", "#E91E63", "#9C27B0", "#00BCD4", "#FFC107", "#8BC34A", "#673AB7", "#795548", "#607D8B", "#F44336", "#3F51B5", "#CDDC39", "#009688", "#FF5722", "#9E9E9E", "#03A9F4", "#C2185B", "#7B1FA2", "#0288D1", "#388E3C", "#F57C00", "#5D4037", "#689F38", "#1976D2", "#D32F2F", "#512DA8", "#00796B", "#FFA000"];
+    let usedColors = [];
+
+    function getNextColor() {
+      if (usedColors.length >= palette.length) {
+        usedColors = [];
+      }
+      let available = palette.filter(c => !usedColors.includes(c));
+      let color = available[Math.floor(Math.random() * available.length)];
+      usedColors.push(color);
+      return color;
+    }
+
     let puzzles = [];
     let thanks = [];
     let counter = 1;
     let editIndex = -1;
 
+    function padNumber(num) {
+      return num.toString().padStart(2, '0');
+    }
+
     function addOrUpdate() {
       const name = document.getElementById("name").value.trim();
       const amount = parseFloat(document.getElementById("amount").value);
-      const color = document.getElementById("color").value;
+      let color = getNextColor();
 
       if (!name || isNaN(amount)) {
         alert("Введи ім’я та суму!");
@@ -66,9 +78,9 @@
       } else {
         if (amount >= 2500) {
           puzzles.push({
-            id: `puzzle-${String(counter).padStart(2, '0')}`,
-            name,
-            color
+            id: 'puzzle-' + padNumber(counter),
+            name: name,
+            color: color
           });
           counter++;
         } else {
@@ -84,7 +96,6 @@
     function clearForm() {
       document.getElementById("name").value = "";
       document.getElementById("amount").value = "";
-      document.getElementById("color").value = "#4CAF50";
       editIndex = -1;
     }
 
@@ -92,26 +103,26 @@
       const list = [];
 
       list.push("<strong>Пазли:</strong>");
-      puzzles.forEach((p, i) => {
-        list.push(`<li>
-          ${p.name} (ID: ${p.id}, колір: ${p.color})
-          <span class="edit-btn" onclick="edit(${i})">✏️</span>
-          <span class="delete-btn" onclick="remove(${i})">🗑️</span>
-        </li>`);
+      puzzles.forEach(function(p, i) {
+        list.push('<li>' +
+          p.name + ' (ID: ' + p.id + ', колір: ' + p.color + ')' +
+          '<span class="edit-btn" onclick="edit(' + i + ')">✏️</span>' +
+          '<span class="delete-btn" onclick="remove(' + i + ')">🗑️</span>' +
+          '</li>');
       });
 
       list.push("<br><strong>Подяки (<2500):</strong>");
-      thanks.forEach((name, i) => {
-        list.push(`<li>
-          ${name}
-          <span class="delete-btn" onclick="removeThank(${i})">🗑️</span>
-        </li>`);
+      thanks.forEach(function(name, i) {
+        list.push('<li>' +
+          name +
+          '<span class="delete-btn" onclick="removeThank(' + i + ')">🗑️</span>' +
+          '</li>');
       });
 
-      document.getElementById("preview").innerHTML = `<ul>${list.join("")}</ul>`;
+      document.getElementById("preview").innerHTML = "<ul>" + list.join("") + "</ul>";
 
       const sum = puzzles.length * 2500 + thanks.length * 2499;
-      document.getElementById("sum").textContent = `Загальна сума донатів: ${sum.toLocaleString()} грн`;
+      document.getElementById("sum").textContent = "Загальна сума донатів: " + sum.toLocaleString() + " грн";
     }
 
     function remove(index) {
@@ -130,7 +141,6 @@
       const item = puzzles[index];
       document.getElementById("name").value = item.name;
       document.getElementById("amount").value = "2500";
-      document.getElementById("color").value = item.color;
       editIndex = index;
     }
 
@@ -152,6 +162,30 @@
       link.href = URL.createObjectURL(blob);
       link.download = "data.json";
       link.click();
+    }
+
+    function clearAll() {
+      if (confirm("Очистити всі дані?")) {
+        puzzles = [];
+        thanks = [];
+        counter = 1;
+        showPreview();
+        showOutput();
+      }
+    }
+
+    function importJSON() {
+      const file = document.getElementById("fileInput").files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const json = JSON.parse(e.target.result);
+        puzzles = json.puzzles || [];
+        thanks = json.thanks || [];
+        counter = puzzles.length + 1;
+        showPreview();
+        showOutput();
+      };
+      reader.readAsText(file);
     }
   </script>
 </body>
