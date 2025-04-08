@@ -12,41 +12,26 @@ body {
   background: white;
 }
 
-.top {
+.site-header {
   background: white;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #ddd;
 }
 
-.middle {
-  background: linear-gradient(135deg, #D8F0FE, #214BC9);
-}
-
-.bottom {
-  background: white;
-  padding-bottom: 2rem;
-}
-
-header {
+.header-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 1.5rem;
-  border-bottom: 1px solid #ccc;
-  flex-wrap: wrap;
-  background: white;
+  align-items: center;
 }
 
-.logo {
-  height: 48px;
-}
-
-.ema-logo-top {
+.logo,
+.ema-logo {
   height: 48px;
 }
 
 .header-text {
-  width: 100%;
   text-align: center;
-  margin: 1rem 0 0;
+  margin-top: 1rem;
 }
 
 header h1 {
@@ -54,7 +39,6 @@ header h1 {
   font-weight: 700;
   margin: 0;
   color: #214BC9;
-  text-align: center;
 }
 
 header .goal {
@@ -62,20 +46,24 @@ header .goal {
   font-weight: 500;
   margin-top: 0.3rem;
   color: #333;
-  text-align: center;
 }
 
-main .content {
+main {
+  background: linear-gradient(135deg, #D8F0FE, #214BC9);
+  padding: 2rem 1rem;
+}
+
+.content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #D8F0FE, #214BC9);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 #drone-wrapper {
-  flex: 1 1 65%;
+  flex: 1 1 62%;
   text-align: center;
   padding: 1rem;
 }
@@ -87,7 +75,7 @@ main .content {
 }
 
 #thanks-wrapper {
-  flex: 1 1 30%;
+  flex: 1 1 33%;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -125,11 +113,10 @@ main .content {
 }
 
 .qr-section {
+  background: white;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
-  padding: 2rem 1rem 3rem;
-  background: white;
+  padding: 2rem 1rem;
 }
 
 .qr-card {
@@ -153,7 +140,7 @@ main .content {
 }
 
 @media (max-width: 768px) {
-  main .content {
+  .content {
     flex-direction: column;
   }
 
@@ -162,17 +149,16 @@ main .content {
     max-height: none;
   }
 
-  header {
+  .header-top {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .header-text {
-    text-align: center;
+    gap: 1rem;
   }
 
   .qr-section {
-    margin-top: 2rem;
     padding: 1.5rem;
+  }
+
+  .qr-card img {
+    width: 140px;
   }
 }

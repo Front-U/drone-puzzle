@@ -9,41 +9,37 @@
 </head>
 <body>
 
-  <div class="top">
-    <header>
+  <header class="site-header">
+    <div class="header-top">
       <img src="assets/logo-front-u.png" alt="Front-U Logo" class="logo" />
-      <div class="header-text">
-        <h1>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</h1>
-        <p class="goal">Мета збору: <strong>75 000 грн</strong> на дрон для підрозділу РУБАК “Вершники”, який активно воює на передовій.</p>
-      </div>
-      <img src="assets/logo-ema.png" alt="EMA Logo" class="ema-logo-top" />
-    </header>
-  </div>
+      <img src="assets/logo-ema.png" alt="EMA Logo" class="ema-logo" />
+    </div>
+    <div class="header-text">
+      <h1>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</h1>
+      <p class="goal">Мета збору: <strong>75 000 грн</strong> на дрон для підрозділу РУБАК “Вершники”, який активно воює на передовій.</p>
+    </div>
+  </header>
 
-  <div class="middle">
-    <main>
-      <div class="content">
-        <div id="drone-wrapper">
-          <object id="drone-svg" type="image/svg+xml" data="assets/drone.svg"></object>
-        </div>
-
-        <div id="thanks-wrapper">
-          <h2>Подяки</h2>
-          <ul id="donors-list"></ul>
-          <div id="total-sum">Зібрано: 0 грн</div>
-        </div>
+  <main>
+    <div class="content">
+      <div id="drone-wrapper">
+        <object id="drone-svg" type="image/svg+xml" data="assets/drone.svg"></object>
       </div>
-    </main>
-  </div>
 
-  <div class="bottom">
-    <section class="qr-section">
-      <div class="qr-card">
-        <img src="assets/qr-code.png" alt="QR код" />
-        <p>Кожен донат від 2500 грн — і пазл твій. Менше — Подяка!</p>
+      <div id="thanks-wrapper">
+        <h2>Подяки</h2>
+        <ul id="donors-list"></ul>
+        <div id="total-sum">Зібрано: 0 грн</div>
       </div>
-    </section>
-  </div>
+    </div>
+  </main>
+
+  <section class="qr-section">
+    <div class="qr-card">
+      <img src="assets/qr-code.png" alt="QR код" />
+      <p>Кожен донат від 2500 грн — і пазл твій. Менше — Подяка!</p>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
