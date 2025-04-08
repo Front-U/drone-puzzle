@@ -125,13 +125,13 @@ footer {
 }
 
 .qr-block.fixed-qr img {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
 .qr-block.fixed-qr p {
-  font-size: 0.8rem;
-  margin-top: 0.4rem;
+  font-size: 1rem;
+  margin-top: 0.6em;
   color: #333;
 }
 
