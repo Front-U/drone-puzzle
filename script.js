@@ -39,7 +39,7 @@ function applyData(json) {
   // Оновлюємо список подяк
   const list = document.getElementById("donors-list");
   list.innerHTML = "";
-  [...thanks.slice().reverse().forEach(item => {
+  [thanks.slice().reverse().forEach(item => {
     const li = document.createElement("li");
     li.textContent = `${item.name} — ${item.amount} грн`;
     list.appendChild(li);
