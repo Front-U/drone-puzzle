@@ -15,7 +15,7 @@ body {
 header {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.5rem 1.5rem 1rem;
   background: rgba(255,255,255,0.9);
   border-bottom: 2px solid #ccc;
@@ -29,12 +29,13 @@ header {
 
 .ema-logo-top {
   height: 60px;
-  margin-left: auto;
+  margin-left: 1rem;
 }
 
 .header-text {
-  flex: 1 1 auto;
-  min-width: 200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 header h1 {
