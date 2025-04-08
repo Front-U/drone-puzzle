@@ -47,7 +47,7 @@ function applyData(json) {
 }
 
 function fetchAndUpdate() {
-  fetch('data.json')
+    fetch('data.json?ts=' + Date.now())
     .then(response => response.json())
     .then(json => {
       if (svgDoc) {
