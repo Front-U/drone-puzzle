@@ -14,7 +14,7 @@ body {
 
 header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1.5rem 1rem;
   background: rgba(255,255,255,0.9);
@@ -24,16 +24,17 @@ header {
 
 .logo {
   height: 48px;
+  margin-right: 1rem;
 }
 
 .ema-logo-top {
-  height: 48px;
+  height: 60px;
+  margin-left: auto;
 }
 
 .header-text {
-  flex: 1 1 100%;
-  text-align: center;
-  margin-top: 1rem;
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 header h1 {
@@ -41,6 +42,7 @@ header h1 {
   font-weight: 700;
   margin: 0;
   color: #214BC9;
+  text-align: center;
 }
 
 header .goal {
@@ -48,6 +50,7 @@ header .goal {
   font-weight: 400;
   margin-top: 0.3rem;
   color: #333;
+  text-align: center;
 }
 
 main .content {
@@ -59,7 +62,7 @@ main .content {
 }
 
 #drone-wrapper {
-  flex: 1 1 65%;
+  flex: 1 1 60%;
   text-align: center;
   padding: 1rem;
 }
@@ -71,7 +74,7 @@ main .content {
 }
 
 #thanks-wrapper {
-  flex: 1 1 30%;
+  flex: 1 1 35%;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
@@ -79,7 +82,7 @@ main .content {
 }
 
 #thanks-wrapper h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #214BC9;
 }
@@ -92,20 +95,21 @@ main .content {
 
 #donors-list li {
   margin-bottom: 4px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #111;
 }
 
 #total-sum {
   margin-top: 1rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #D32F2F;
 }
 
 footer {
-  height: 0;
+  height: 100px;
   position: relative;
+  background: transparent;
 }
 
 .qr-block.fixed-qr {
@@ -141,11 +145,12 @@ footer {
 
   header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .header-text {
-    text-align: center;
+  .ema-logo-top {
+    align-self: flex-end;
+    margin-top: 0.5rem;
   }
 
   .qr-block.fixed-qr {
