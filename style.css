@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,38 +8,49 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #D8F0FE, #214BC9);
   color: #1c1c1c;
+  background: white;
+}
+
+.top {
+  background: white;
+}
+
+.middle {
+  background: linear-gradient(135deg, #D8F0FE, #214BC9);
+}
+
+.bottom {
+  background: white;
+  padding-bottom: 2rem;
 }
 
 header {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1.5rem 1.5rem 1rem;
-  background: white;
-  border-bottom: 2px solid #ccc;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #ccc;
   flex-wrap: wrap;
+  background: white;
 }
 
 .logo {
   height: 48px;
-  margin-right: 1rem;
 }
 
 .ema-logo-top {
   height: 48px;
-  margin-left: 1rem;
 }
 
 .header-text {
   width: 100%;
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
 }
 
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   color: #214BC9;
@@ -48,7 +59,7 @@ header h1 {
 
 header .goal {
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0.3rem;
   color: #333;
   text-align: center;
@@ -59,7 +70,7 @@ main .content {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 1rem 8rem; /* extra bottom space for QR */
+  padding: 2rem 1rem;
   background: linear-gradient(135deg, #D8F0FE, #214BC9);
 }
 
@@ -78,15 +89,19 @@ main .content {
 #thanks-wrapper {
   flex: 1 1 30%;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
   margin-top: 1rem;
+  max-height: 360px;
+  overflow-y: auto;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
 }
 
 #thanks-wrapper h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #214BC9;
+  margin-bottom: 0.5rem;
 }
 
 #donors-list {
@@ -98,6 +113,7 @@ main .content {
 #donors-list li {
   margin-bottom: 4px;
   font-size: 0.95rem;
+  font-weight: 400;
   color: #111;
 }
 
@@ -108,43 +124,42 @@ main .content {
   color: #D32F2F;
 }
 
-footer {
-  height: 0;
-  position: relative;
+.qr-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem 1rem 3rem;
   background: white;
 }
 
-.qr-block.fixed-qr {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+.qr-card {
   background: white;
-  padding: 0.8rem;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 14px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  z-index: 1000;
 }
 
-.qr-block.fixed-qr img {
+.qr-card img {
   width: 180px;
   height: auto;
 }
 
-.qr-block.fixed-qr p {
+.qr-card p {
   font-size: 1.05rem;
   margin-top: 0.6rem;
   color: #111;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   main .content {
     flex-direction: column;
-    padding-bottom: 2rem;
   }
 
   #thanks-wrapper {
     margin-top: 2rem;
+    max-height: none;
   }
 
   header {
@@ -152,14 +167,12 @@ footer {
     align-items: center;
   }
 
-  .ema-logo-top {
-    align-self: flex-end;
-    margin-top: 0.5rem;
+  .header-text {
+    text-align: center;
   }
 
-  .qr-block.fixed-qr {
-    position: static;
-    margin: 2rem auto 0;
-    background: white;
+  .qr-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
   }
 }
