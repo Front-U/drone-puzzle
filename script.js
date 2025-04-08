@@ -1,10 +1,12 @@
+
 let svgDoc = null;
 let previousState = {};
 
 function applyData(json) {
-  const data = json.puzzles;
-  const thanks = json.thanks;
+  const data = json.puzzles || [];
+  const thanks = json.thanks || [];
 
+  // Оновлюємо пазли
   data.forEach(item => {
     const id = item.id;
     const color = item.color;
@@ -14,7 +16,6 @@ function applyData(json) {
     const text = svgDoc.getElementById(`text-${id.slice(-2)}`);
 
     if (puzzle) {
-      // Перевіряємо, чи щось змінилось
       const was = previousState[id];
       const changed = !was || was.color !== color || was.name !== name;
 
@@ -22,13 +23,11 @@ function applyData(json) {
         puzzle.setAttribute('fill', color);
         puzzle.classList.add("puzzle-highlight");
 
-        // Забрати підсвітку через 2 секунди
         setTimeout(() => {
           puzzle.classList.remove("puzzle-highlight");
         }, 2000);
       }
 
-      // Запам’ятовуємо новий стан
       previousState[id] = { color, name };
     }
 
@@ -37,19 +36,22 @@ function applyData(json) {
     }
   });
 
+  // Оновлюємо список подяк
   const list = document.getElementById("donors-list");
   list.innerHTML = "";
-thanks.reverse().forEach(name => {
-  const li = document.createElement("li");
-  li.textContent = name;
-  list.appendChild(li);
+  [...thanks].reverse().forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item.name;
+    list.appendChild(li);
   });
-  const total = data.reduce((sum, item) => sum + (item.amount || 0), 0);
+
+  // Підрахунок загальної суми
+  const total = [...data, ...thanks].reduce((sum, item) => sum + (item.amount || 0), 0);
   document.getElementById("total-sum").textContent = `Зібрано: ${total.toLocaleString("uk-UA")} грн`;
 }
 
 function fetchAndUpdate() {
-    fetch('data.json?ts=' + Date.now())
+  fetch('data.json?ts=' + Date.now())
     .then(response => response.json())
     .then(json => {
       if (svgDoc) {
