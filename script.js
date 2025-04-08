@@ -42,7 +42,7 @@ function applyData(json) {
 
   thanks.slice().reverse().forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.name} — ${item.amount} грн`;
+    li.textContent = item.name;
     list.appendChild(li);
   });
 
