@@ -17,7 +17,7 @@ header {
   align-items: flex-start;
   justify-content: center;
   padding: 1.5rem 1.5rem 1rem;
-  background: rgba(255,255,255,0.9);
+  background: white;
   border-bottom: 2px solid #ccc;
   flex-wrap: wrap;
 }
@@ -28,7 +28,7 @@ header {
 }
 
 .ema-logo-top {
-  height: 60px;
+  height: 48px;
   margin-left: 1rem;
 }
 
@@ -59,11 +59,12 @@ main .content {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 8rem; /* extra bottom space for QR */
+  background: linear-gradient(135deg, #D8F0FE, #214BC9);
 }
 
 #drone-wrapper {
-  flex: 1 1 60%;
+  flex: 1 1 65%;
   text-align: center;
   padding: 1rem;
 }
@@ -75,7 +76,7 @@ main .content {
 }
 
 #thanks-wrapper {
-  flex: 1 1 35%;
+  flex: 1 1 30%;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
@@ -83,7 +84,7 @@ main .content {
 }
 
 #thanks-wrapper h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #214BC9;
 }
@@ -96,7 +97,7 @@ main .content {
 
 #donors-list li {
   margin-bottom: 4px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #111;
 }
 
@@ -108,36 +109,38 @@ main .content {
 }
 
 footer {
-  height: 100px;
+  height: 0;
   position: relative;
-  background: transparent;
+  background: white;
 }
 
 .qr-block.fixed-qr {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background: rgba(255,255,255,0.9);
-  padding: 0.5rem;
-  border-radius: 10px;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .qr-block.fixed-qr img {
-  width: 150px;
+  width: 180px;
   height: auto;
 }
 
 .qr-block.fixed-qr p {
-  font-size: 1rem;
-  margin-top: 0.6em;
-  color: #333;
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  color: #111;
 }
 
 @media (max-width: 768px) {
   main .content {
     flex-direction: column;
+    padding-bottom: 2rem;
   }
 
   #thanks-wrapper {
@@ -146,7 +149,7 @@ footer {
 
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .ema-logo-top {
@@ -157,5 +160,6 @@ footer {
   .qr-block.fixed-qr {
     position: static;
     margin: 2rem auto 0;
+    background: white;
   }
 }
