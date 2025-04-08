@@ -1,30 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Дрон-Пазл</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Подаруй частинку дрона!</h1> 
+    <h1>ЗБЕРИ ДРОН ДЛЯ ВЕРШНИКІВ</h1>
+    <p class="goal">Мета збору: <strong>75 000 грн</strong> на дрон для підрозділу РУБАК “Вершники”, який активно воює на передовій.</p>
   </header>
 
   <main>
-    <section id="puzzle-container">
-      <h2>Інтерактивний пазл</h2>
-      <!-- SVG буде вставлений сюди -->
-      <object id="drone-svg" type="image/svg+xml" data="assets/drone.svg"></object>
-    </section>
+    <div class="content">
+      <section id="drone-wrapper">
+        <object id="drone-svg" data="drone.svg" type="image/svg+xml"></object>
+      </section>
 
-    <section id="thanks">
-      <h2>Подяка</h2>
-      <ul id="donors-list"></ul>
-    </section>
-
-    
+      <aside id="thanks-wrapper">
+        <h2>Подяки</h2>
+        <ul id="donors-list"></ul>
+        <div id="total-sum">Зібрано: 0 грн</div>
+      </aside>
+    </div>
   </main>
+
+  <footer>
+    <div class="qr-block">
+      <img src="assets/qr.png" alt="QR код до банку" />
+      <p>Кожен донат від 2500 грн — і пазл твій. Менше — Подяка!</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
