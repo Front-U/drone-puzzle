@@ -2,161 +2,21 @@
   "puzzles": [
     {
       "id": "puzzle-01",
-      "name": "Микола з Привату",
-      "color": "#E91E63",
-      "amount": 3500
+      "name": "Віктор",
+      "amount": 5000,
+      "color": "#E91E63"
     },
     {
       "id": "puzzle-02",
-      "name": "Марина з Ощаду",
-      "color": "#607D8B",
-      "amount": 3500
-    },
-    {
-      "id": "puzzle-03",
-      "name": "Антон з Sense",
-      "color": "#009688",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-04",
-      "name": "Сергій Рубчак",
-      "color": "#8BC34A",
-      "amount": 4000
-    },
-    {
-      "id": "puzzle-05",
-      "name": "Наталія Гринь",
-      "color": "#3F51B5",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-06",
-      "name": "Олексій Михайлівський",
-      "color": "#1976D2",
-      "amount": 250
-    },
-    {
-      "id": "puzzle-07",
-      "name": "Михайло Гудзь",
-      "color": "#FF5722",
-      "amount": 250
-    },
-    {
-      "id": "puzzle-08",
-      "name": "Акордбанк",
-      "color": "#00BCD4",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-09",
-      "name": "Олена з Кредо",
-      "color": "#F44336",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-10",
-      "name": "Євген",
-      "color": "#CDDC39",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-11",
-      "name": "Ярослав",
-      "color": "#512DA8",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-12",
-      "name": "Ірина",
-      "color": "#689F38",
-      "amount": 2500
-    },
-    {
-      "id": "puzzle-13",
-      "name": "Ольга",
-      "color": "#009688",
-      "amount": 3500
-    },
-    {
-      "id": "puzzle-14",
-      "name": "Артем",
-      "color": "#689F38",
-      "amount": 4000
+      "name": "Ігор",
+      "amount": 2500,
+      "color": "#607D8B"
     }
   ],
   "thanks": [
     {
-      "name": "Олексій",
-      "amount": 654
-    },
-    {
-      "name": "Марія",
-      "amount": 829
-    },
-    {
-      "name": "Петро з Таскомбанк",
-      "amount": 1981
-    },
-    {
-      "name": "Микола",
-      "amount": 1474
-    },
-    {
-      "name": "Віталій Пунчко",
-      "amount": 1975
-    },
-    {
-      "name": "Григорій з РБА",
-      "amount": 457
-    },
-    {
-      "name": "Сергій Бондаренко",
-      "amount": 1105
-    },
-    {
-      "name": "Валентин",
-      "amount": 264
-    },
-    {
-      "name": "Денис",
-      "amount": 1932
-    },
-    {
-      "name": "Максим",
-      "amount": 124
-    },
-    {
-      "name": "Борис Крунюк",
-      "amount": 386
-    },
-    {
-      "name": "Гнат",
-      "amount": 414
-    },
-    {
-      "name": "Мирон",
-      "amount": 2080
-    },
-    {
-      "name": "Петро",
-      "amount": 1830
-    },
-    {
-      "name": "Макс з ФК",
-      "amount": 1540
-    },
-    {
-      "name": "Надія",
-      "amount": 452
-    },
-    {
-      "name": "Віра",
-      "amount": 2218
-    },
-    {
-      "name": "Любов",
-      "amount": 2331
+      "name": "Наталя",
+      "amount": 800
     }
   ]
 }
