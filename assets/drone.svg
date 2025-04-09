@@ -1,73 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 600 300" style="enable-background:new 0 0 600 300;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#F0F0F0;stroke:#000000;}
-	.st1{font-family:'ArialMT';}
-	.st2{font-size:10px;}
-	.st3{fill:#1F5644;stroke:#000000;}
-	.st4{fill:#9B3D3D;stroke:#000000;}
-	.st5{fill:#8D930D;stroke:#000000;}
-</style>
-<rect id="puzzle-01" y="0" class="st0" width="100" height="50"/>
-<text id="text-01" transform="matrix(1 0 0 1 44.4385 25)" class="st1 st2">#1</text>
-<rect id="puzzle-02" x="100" y="0" class="st0" width="100" height="50"/>
-<text id="text-02" transform="matrix(1 0 0 1 144.4385 25)" class="st1 st2">#2</text>
-<rect id="puzzle-03" x="200" y="0" class="st0" width="100" height="50"/>
-<text id="text-03" transform="matrix(1 0 0 1 244.4385 25)" class="st1 st2">#3</text>
-<rect id="puzzle-04" x="300" y="0" class="st0" width="100" height="50"/>
-<text id="text-04" transform="matrix(1 0 0 1 344.4385 25)" class="st1 st2">#4</text>
-<rect id="puzzle-05" x="400" y="0" class="st0" width="100" height="50"/>
-<text id="text-05" transform="matrix(1 0 0 1 444.4385 25)" class="st1 st2">#5</text>
-<rect id="puzzle-06" y="50" class="st0" width="100" height="50"/>
-<text id="text-06" transform="matrix(1 0 0 1 44.4385 75)" class="st1 st2">#6</text>
-<rect id="puzzle-07" x="100" y="50" class="st0" width="100" height="50"/>
-<text id="text-07" transform="matrix(1 0 0 1 144.4385 75)" class="st1 st2">#7</text>
-<rect id="puzzle-08" x="200" y="50" class="st0" width="100" height="50"/>
-<text id="text-08" transform="matrix(1 0 0 1 244.4385 75)" class="st1 st2">#8</text>
-<rect id="puzzle-09" x="300" y="50" class="st0" width="100" height="50"/>
-<text id="text-09" transform="matrix(1 0 0 1 344.4385 75)" class="st1 st2">#9</text>
-<rect id="puzzle-10" x="400" y="50" class="st0" width="100" height="50"/>
-<text id="text-10" transform="matrix(1 0 0 1 441.6577 75)" class="st1 st2">#10</text>
-<rect id="puzzle-11" y="100" class="st0" width="100" height="50"/>
-<text id="text-11" transform="matrix(1 0 0 1 42.0288 125)" class="st1 st2">#11</text>
-<rect id="puzzle-12" x="100" y="100" class="st0" width="100" height="50"/>
-<text id="text-12" transform="matrix(1 0 0 1 141.6577 125)" class="st1 st2">#12</text>
-<rect id="puzzle-13" x="200" y="100" class="st0" width="100" height="50"/>
-<text id="text-13" transform="matrix(1 0 0 1 241.6577 125)" class="st1 st2">#13</text>
-<rect id="puzzle-14" x="300" y="100" class="st0" width="100" height="50"/>
-<text id="text-14" transform="matrix(1 0 0 1 341.6577 125)" class="st1 st2">#14</text>
-<polygon id="puzzle-15" class="st3" points="444.5,90.8 537.1,84.7 459.7,150 400,150 "/>
-<text id="text-15" transform="matrix(0.9048 -0.4258 0.4258 0.9048 450.5958 126.4796)" class="st1 st2">#15</text>
-<rect id="puzzle-16" y="150" class="st0" width="100" height="50"/>
-<text id="text-16" transform="matrix(1 0 0 1 41.6577 175)" class="st1 st2">#16</text>
-<rect id="puzzle-17" x="100" y="150" transform="matrix(0.855 -0.5186 0.5186 0.855 -69.0064 103.1585)" class="st4" width="100" height="50"/>
-<text id="text-17" transform="matrix(1 0 0 1 141.6577 175)" class="st1 st2">#17</text>
-<rect id="puzzle-18" x="200" y="150" class="st0" width="100" height="50"/>
-<text id="text-18" transform="matrix(1 0 0 1 241.6577 175)" class="st1 st2">#18</text>
-<rect id="puzzle-19" x="300" y="150" class="st0" width="100" height="50"/>
-<text id="text-19" transform="matrix(1 0 0 1 341.6577 175)" class="st1 st2">#19</text>
-<polygon id="puzzle-20" class="st0" points="400,150 477.7,164.2 500,200 400,200 "/>
-<text id="text-20" transform="matrix(1 0 0 1 441.6577 175)" class="st1 st2">#20</text>
-<rect id="puzzle-21" y="200" class="st0" width="100" height="50"/>
-<text id="text-21" transform="matrix(1 0 0 1 41.6577 225)" class="st1 st2">#21</text>
-<rect id="puzzle-22" x="100" y="200" class="st0" width="100" height="50"/>
-<text id="text-22" transform="matrix(1 0 0 1 141.6577 225)" class="st1 st2">#22</text>
-<rect id="puzzle-23" x="200" y="200" class="st0" width="100" height="50"/>
-<text id="text-23" transform="matrix(1 0 0 1 241.6577 225)" class="st1 st2">#23</text>
-<rect id="puzzle-24" x="300" y="200" class="st0" width="100" height="50"/>
-<text id="text-24" transform="matrix(1 0 0 1 341.6577 225)" class="st1 st2">#24</text>
-<rect id="puzzle-25" x="400" y="200" class="st0" width="100" height="50"/>
-<text id="text-25" transform="matrix(1 0 0 1 441.6577 225)" class="st1 st2">#25</text>
-<rect id="puzzle-26" y="250" class="st0" width="100" height="50"/>
-<text id="text-26" transform="matrix(1 0 0 1 41.6577 275)" class="st1 st2">#26</text>
-<rect id="puzzle-27" x="68.8" y="227.3" class="st5" width="100" height="50"/>
-<text id="text-27" transform="matrix(1 0 0 1 110.4766 252.3228)" class="st1 st2">#27</text>
-<rect id="puzzle-28" x="200" y="250" class="st0" width="100" height="50"/>
-<text id="text-28" transform="matrix(1 0 0 1 241.6577 275)" class="st1 st2">#28</text>
-<rect id="puzzle-29" x="300" y="250" class="st0" width="100" height="50"/>
-<text id="text-29" transform="matrix(1 0 0 1 341.6577 275)" class="st1 st2">#29</text>
-<rect id="puzzle-30" x="400" y="250" class="st0" width="100" height="50"/>
-<text id="text-30" transform="matrix(1 0 0 1 441.6577 275)" class="st1 st2">#30</text>
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-size: 10px; text-anchor: middle; dominant-baseline: middle; }
+  </style>
+  <!-- 6 рядків по 5 квадратів -->
+  <!-- Генеруємо 30 пазлів -->
+  <!-- Кожен 100x50 -->
+  <!-- ID: puzzle-01 ... puzzle-30 -->
+  <!-- Текст: text-01 ... text-30 -->
+  <!-- Зміщення по X: 100, по Y: 50 -->
+
+  <!-- Генерація: -->
+  <!-- i = 0 to 29: x = (i % 5) * 100, y = Math.floor(i / 5) * 50 -->
+
+  <!-- Створено вручну :) -->
+
+  <!-- Рядок 1 -->
+  <rect id="puzzle-01" x="0" y="0" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-01" x="50" y="25">#1</text>
+
+  <rect id="puzzle-02" x="100" y="0" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-02" x="150" y="25">#2</text>
+
+  <rect id="puzzle-03" x="200" y="0" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-03" x="250" y="25">#3</text>
+
+  <rect id="puzzle-04" x="300" y="0" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-04" x="350" y="25">#4</text>
+
+  <rect id="puzzle-05" x="400" y="0" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-05" x="450" y="25">#5</text>
+
+  <!-- Рядок 2 -->
+  <rect id="puzzle-06" x="0" y="50" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-06" x="50" y="75">#6</text>
+
+  <rect id="puzzle-07" x="100" y="50" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-07" x="150" y="75">#7</text>
+
+  <rect id="puzzle-08" x="200" y="50" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-08" x="250" y="75">#8</text>
+
+  <rect id="puzzle-09" x="300" y="50" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-09" x="350" y="75">#9</text>
+
+  <rect id="puzzle-10" x="400" y="50" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-10" x="450" y="75">#10</text>
+
+  <!-- Рядок 3 -->
+  <rect id="puzzle-11" x="0" y="100" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-11" x="50" y="125">#11</text>
+
+  <rect id="puzzle-12" x="100" y="100" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-12" x="150" y="125">#12</text>
+
+  <rect id="puzzle-13" x="200" y="100" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-13" x="250" y="125">#13</text>
+
+  <rect id="puzzle-14" x="300" y="100" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-14" x="350" y="125">#14</text>
+
+  <rect id="puzzle-15" x="400" y="100" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-15" x="450" y="125">#15</text>
+
+  <!-- Рядок 4 -->
+  <rect id="puzzle-16" x="0" y="150" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-16" x="50" y="175">#16</text>
+
+  <rect id="puzzle-17" x="100" y="150" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-17" x="150" y="175">#17</text>
+
+  <rect id="puzzle-18" x="200" y="150" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-18" x="250" y="175">#18</text>
+
+  <rect id="puzzle-19" x="300" y="150" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-19" x="350" y="175">#19</text>
+
+  <rect id="puzzle-20" x="400" y="150" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-20" x="450" y="175">#20</text>
+
+  <!-- Рядок 5 -->
+  <rect id="puzzle-21" x="0" y="200" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-21" x="50" y="225">#21</text>
+
+  <rect id="puzzle-22" x="100" y="200" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-22" x="150" y="225">#22</text>
+
+  <rect id="puzzle-23" x="200" y="200" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-23" x="250" y="225">#23</text>
+
+  <rect id="puzzle-24" x="300" y="200" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-24" x="350" y="225">#24</text>
+
+  <rect id="puzzle-25" x="400" y="200" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-25" x="450" y="225">#25</text>
+
+  <!-- Рядок 6 -->
+  <rect id="puzzle-26" x="0" y="250" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-26" x="50" y="275">#26</text>
+
+  <rect id="puzzle-27" x="100" y="250" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-27" x="150" y="275">#27</text>
+
+  <rect id="puzzle-28" x="200" y="250" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-28" x="250" y="275">#28</text>
+
+  <rect id="puzzle-29" x="300" y="250" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-29" x="350" y="275">#29</text>
+
+  <rect id="puzzle-30" x="400" y="250" width="100" height="50" fill="#f0f0f0" stroke="#000"/>
+  <text id="text-30" x="450" y="275">#30</text>
 </svg>
